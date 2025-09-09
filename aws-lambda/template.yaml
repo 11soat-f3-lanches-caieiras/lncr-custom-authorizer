@@ -20,7 +20,7 @@ Resources:
       MemorySize: 2048
       Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
         Variables:
-          OAUTH_SECRET_KEY: ${OAUTH_SECRET_KEY}
+          LNCR_OAUTH_SECRET_KEY: ${LNCR_OAUTH_SECRET_KEY}
       Events:
         AuthorizerFunction:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
