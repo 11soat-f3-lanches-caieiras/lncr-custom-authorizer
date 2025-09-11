@@ -12,6 +12,8 @@ Resources:
   CustomAuthorizer:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
+      StackName: lncr-customer-authorizer-stack
+      S3BucketName: lncr-customer-authorizer-s3
       FunctionName: lncr-customer-authorizer
       CodeUri: CustomAuthorizer
       Handler: br.com.tp.lncr.aws.lambda.Authorizer::handleRequest
