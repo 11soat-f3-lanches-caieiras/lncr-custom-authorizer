@@ -115,6 +115,7 @@ jobs:
     name: Deploy to AWS Lambda Function
     needs: build
     runs-on: codebuild-github-lncr-custom-authorizer-${{ github.run_id }}-${{ github.run_attempt }}
+    if: github.event.pull_request.merged == true || github.event_name == 'push'
     environment:
       name: ${{ github.ref_name == 'master' && 'prd' || 'dev' }}
     steps:
