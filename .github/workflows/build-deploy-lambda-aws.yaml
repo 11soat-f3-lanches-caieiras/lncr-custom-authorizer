@@ -18,12 +18,6 @@ on:
           options:
             - dev
             - prd
-        branch:
-          description: 'Branch para build'
-          required: true
-          default: 'develop'
-          type: string
-
 permissions:
   contents: write
   packages: write
