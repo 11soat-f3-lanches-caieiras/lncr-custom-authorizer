@@ -1,4 +1,4 @@
-name: Construir e Deploy do lncr-customer-authorizer AWS Lambda
+name: Build and deploy lncr-customer-authorizer AWS Lambda
 on:
   push:
     branches:
