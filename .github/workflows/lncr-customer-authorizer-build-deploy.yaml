@@ -4,7 +4,8 @@ on:
     types: [ infra-base-completed ]
 
   workflow_dispatch:
-
+    types: [infra-base-completed]
+    
 env:
   # variáveis
     LNCR_FUNCTION_NAME: ${{ vars.LNCR_FUNCTION_NAME }}
@@ -124,8 +125,7 @@ jobs:
   deploy:
     name: Deploy para Função AWS Lambda
     needs: build
-    runs-on: codebuild-github-lncr-custom-authorizer-${{ github.run_id }}-${{ github.run_attempt }}
-    if: github.event.pull_request.merged == true || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: codebuild-github-lncr-custom-authorizer-${{ github.run_id }}-${{ github.run_attempt }
     environment:
       name: ${{ github.ref_name == 'master' && 'prd' || 'dev' }}
     steps:
