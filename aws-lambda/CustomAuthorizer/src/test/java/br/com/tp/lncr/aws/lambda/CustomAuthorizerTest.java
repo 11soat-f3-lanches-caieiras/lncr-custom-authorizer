@@ -156,8 +156,8 @@ public class CustomAuthorizerTest {
 
         input.setVersion("2.0");
         input.setType("REQUEST");
-        input.setHeaders(Map.of("Authorization", "Bearer " + token));
-        input.setRawPath(path);
+        input.setHeaders(Map.of("authorization", "Bearer " + token));
+        input.setRouteKey(path);
         input.setRequestContext(new APIGatewayV2CustomAuthorizerEvent.RequestContext());
         input.getRequestContext().setHttp(new APIGatewayV2CustomAuthorizerEvent.Http());
         input.getRequestContext().getHttp().setMethod(method);
