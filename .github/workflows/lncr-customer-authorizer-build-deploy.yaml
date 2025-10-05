@@ -4,7 +4,7 @@ on:
     types: [ infra-base-completed ]
 
   workflow_dispatch:
-
+    
 env:
   # variáveis
     LNCR_FUNCTION_NAME: ${{ vars.LNCR_FUNCTION_NAME }}
